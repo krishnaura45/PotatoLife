@@ -25,7 +25,9 @@ PotatoLife is an automated project for farmers for timely and accurate diagnosis
 - User-Friendly Implementation: FastAPI and Postman software facilitated user-friendly disease classification, empowering farmers and experts for on-the-spot diagnosis.
 - Effectively address timely and accurate detection of potato leaf diseases.
 
-
-
-
+### REFERENCES
+1) S. Biswas, B. Jagyasi, B. P. Singh and M. Lal, "Severity identification of Potato Late Blight disease from crop images captured under uncontrolled environment," 2014 IEEE Canada International Humanitarian Technology Conference - (IHTC), Montreal, QC, Canada, 2014, pp. 1-5, doi: 10.1109/IHTC.2014.7147519.
+2) G. Athanikar and P. Badar, “Potato Leaf Diseases Detection and Classification System”, IJCSMC, Vol. 5, Issue. 2, February 2016, pg.76 – 88
+3) Rabbia Mahum, Haris Munir, Zaib-Un-Nisa Mughal, Muhammad Awais, Falak Sher Khan, Muhammad Saqlain, Saipunidzam Mahamad & Iskander Tlili. A novel framework for potato leaf disease detection using an efficient deep learning model, Human and Ecological Risk Assessment: An International Journal; 2022.
+4) Chakraborty KK, Mukherjee R, Chakroborty C, Bora K. Automated recognition of optical image based potato leaf blight diseases using deep learning. Physiological and Molecular Plant Pathology. 2022;117:101781
 
