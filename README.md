@@ -35,26 +35,26 @@ PotatoLife is an automated project for farmers for timely and accurate diagnosis
 
 ##### Step 3: Model Building
 - CNN Model Architecture: Consisted of-
-  a) 6 convolutional layers with 3X3 kernel size and ReLU activation function
-  b) 6 max-pooling layers 
-  c) A dropout layer
-  d) A flattening layer
-  e) 2 dense layers
+  1) 6 convolutional layers with 3X3 kernel size and ReLU activation function
+  2) 6 max-pooling layers 
+  3) A dropout layer
+  4) A flattening layer
+  5) 2 dense layers
 - Compiled the model using Adam optimizer, Sparse categorical cross-entropy loss and Accuracy metric.
 - The training process involved 50 epochs, with each epoch comprising 54 steps.
 
 ##### Step 4: FastAPI Integration
 - Implementation details:
-  a) Endpoint Creation: We developed a FastAPI server on localhost, listening on port 8000.
-  b) Endpoint Routes: We implemented the following API routes to facilitate interaction with the model-
-POST /predict: This route accepts an uploaded potato leaf image, processes it, feeds it into our trained model, and returns the predicted class (early blight, late blight, or healthy) along with a confidence score.
+  1) Endpoint Creation: We developed a FastAPI server on localhost, listening on port 8000.
+  2) Endpoint Routes: We implemented the Post / Predict API route to facilitate interaction with the model. This route accepts an uploaded potato leaf image, processes it, feeds it into our trained model, and returns the predicted class (early blight, late blight, or healthy) along with a confidence score.
 - Image Processing and Model Prediction
 Upon receiving an image upload through the /predict endpoint, FastAPI performs the following steps:
-  a) Image Conversion: FastAPI converts the uploaded image into a NumPy array.
-  b) Tensor Conversion: The NumPy array is further transformed into a tensor, which is compatible with our trained model.
-  c) Model Prediction: The tensorized image is passed through the model, and the model predicts the disease class and provides a confidence score for the prediction.
+  1) Image Conversion: FastAPI converts the uploaded image into a NumPy array.
+  2) Tensor Conversion: The NumPy array is further transformed into a tensor, which is compatible with our trained model.
+  3) Model Prediction: The tensorized image is passed through the model, and the model predicts the disease class and provides a confidence score for the prediction.
 
 - Response Format
+
 ![image](https://github.com/KD-Blitz/PotatoLife/assets/118080140/f0d62ccf-869c-4c59-a73b-b9d561cb1255)
 
 ### PROPOSED FRAMEWORK
@@ -65,9 +65,9 @@ Upon receiving an image upload through the /predict endpoint, FastAPI performs t
 ![image](https://github.com/KD-Blitz/PotatoLife/assets/118080140/d4a77d8c-e31f-41f6-b59f-0fce38e70c95)
 
 - Alongside, we have the model’s predictions on a sample of test images, where:
- - “Actual" represents the true class.
- - “Predicted represents the predicted class.
- - “Confidence" is the confidence score associated with the prediction, which reflects upon the reliability of the model's decision.
+   “Actual" represents the true class.
+   “Predicted represents the predicted class.
+   “Confidence" is the confidence score associated with the prediction, which reflects upon the reliability of the model's decision.
 ![image](https://github.com/KD-Blitz/PotatoLife/assets/118080140/199ceb75-6bd8-4ab3-9f99-a75f5dcf4ddb)
 
 - FastAPI Working
