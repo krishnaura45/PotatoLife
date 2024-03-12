@@ -1,6 +1,6 @@
-# PotatoLife : API based Potato Disease Classification 
+# Potato Life : API based Potato Disease Classification 
 
-PotatoLife is an automated project for farmers for timely and accurate diagnosis of diseases in potato leaves.
+'Potato Life' is an automated project for farmers for timely and accurate diagnosis of diseases in potato leaves.
 
 ### INTRODUCTION
 - Potato(Solanum tuberosum) is the fourth-most important staple crop in the world.   
