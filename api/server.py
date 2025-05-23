@@ -7,7 +7,7 @@ from PIL import Image
 import tensorflow as tf
 app=FastAPI()
 
-MODEL = tf.keras.models.load_model("C:/Users/Krishna/Downloads/PotatoDC/saved_models/4", compile=False)     # .. --> to go to parent directory
+MODEL = tf.keras.models.load_model("saved_models/4", compile=False)     
 CLASS_NAMES = ["Early Blight", "Late Blight", "Healthy"]
 
 @app.get("/ping")  # specifying entry/end point
