@@ -2,6 +2,13 @@
 
 'Potato Life' is an automated project for farmers for timely and accurate diagnosis of diseases in potato leaves.
 
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![Optimized For Accuracy](https://img.shields.io/badge/Metric--Focused-Accuracy-yellowgreen?style=for-the-badge)
+
+
 ### INTRODUCTION
 - Potato(Solanum tuberosum) is the fourth-most important staple crop in the world.   
 - Potato crops are susceptible to multiple diseases.
@@ -95,10 +102,6 @@ Upon receiving an image upload through the /predict endpoint, FastAPI performs t
 2) G. Athanikar and P. Badar, “Potato Leaf Diseases Detection and Classification System”, IJCSMC, Vol. 5, Issue. 2, February 2016, pg.76 – 88
 3) Rabbia Mahum, Haris Munir, Zaib-Un-Nisa Mughal, Muhammad Awais, Falak Sher Khan, Muhammad Saqlain, Saipunidzam Mahamad & Iskander Tlili. A novel framework for potato leaf disease detection using an efficient deep learning model, Human and Ecological Risk Assessment: An International Journal; 2022.
 4) Chakraborty KK, Mukherjee R, Chakroborty C, Bora K. Automated recognition of optical image based potato leaf blight diseases using deep learning. Physiological and Molecular Plant Pathology. 2022;117:101781
-
-### Tech Stacks Used
-- Python
-- FastAPI
 
 ### Group/Team
 Krishna Dubey (DL and Backend), Pankaj Kumar Giri (Backend)
