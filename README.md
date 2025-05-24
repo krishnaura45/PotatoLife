@@ -1,6 +1,6 @@
-# Potato Life : API based Potato Disease Classification 
+# Potato Life : End-to-end Potato Disease Classification
 
-'Potato Life' is an automated project for farmers for timely and accurate diagnosis of diseases in potato leaves.
+**<a href="https://potato-health-checker.streamlit.app" alt="Web app deployed">Potato Life</a>** is an automated project for farmers for timely and accurate diagnosis of diseases in potato leaves.
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
