@@ -1,6 +1,5 @@
-tensorflow==2.5.0
+tensorflow==2.13.0
 streamlit
 python-multipart
 pillow
-tensorflow-serving-api==2.5.0
 numpy
