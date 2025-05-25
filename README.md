@@ -1,6 +1,6 @@
 # Potato Life : End-to-end Potato Disease Classification
 
-**<a href="https://potato-health-checker.streamlit.app" alt="Web app deployed">Potato Life</a>** is an automated project for farmers for timely and accurate diagnosis of diseases in potato leaves.
+<b>Potato Life</b> is an automated project for farmers for timely and accurate diagnosis of diseases in potato leaves.
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
@@ -9,6 +9,28 @@
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 ![Optimized For Accuracy](https://img.shields.io/badge/Metric--Focused-Accuracy-yellowgreen?style=for-the-badge)
 
+---
+
+### FILES
+
+- `PlantVillage_Data`: Dataset info and zipped images.
+- `Training.ipynb`: Data processing and training code.
+- `saved_models/`: Contains trained model versions.
+- `api/`: Contains server.py for FastAPI and requirements.txt.
+- `app.py`: Streamlit web app code.
+- `requirements.txt`: Required libraries for deployment.
+- `runtime.txt`: Specifies Python runtime version for deployment.
+
+---
+
+### IMPORTANT LINKS
+
+- 🌐 Web App Link: [Potato Health Checker](https://potato-health-checker.streamlit.app)
+- 📂 Source Dataset (Kaggle): [Plant Village](https://www.kaggle.com/datasets/arjuntejaswi/plant-village)
+- 📄 Published Dataset (Kaggle): [Potato Leaf Disease Gallery](https://www.kaggle.com/datasets/krishd123/potato-leaf-disease-gallery)
+- 📓 Kaggle Notebook: [Potato Disease Classification](https://www.kaggle.com/code/krishd123/potato-disease-classification)
+
+---
 
 ### INTRODUCTION
 - Potato(Solanum tuberosum) is the fourth-most important staple crop in the world.   
@@ -18,8 +40,11 @@
 
 ![image](https://github.com/KD-Blitz/PotatoLife/assets/118080140/d31e8943-9e5d-4524-b15a-141998694ce5)
 
+---
+<!--
 ### RELATED WORKS
 ![image](https://github.com/KD-Blitz/PotatoLife/assets/118080140/2cf49bb6-f4da-4457-b784-1043395233ba)
+-->
 
 ### PROBLEM DEFINITION
 - Potato crops are highly vulnerable to diseases, impacting yield and food security.
@@ -27,21 +52,23 @@
 - Traditional diagnosis methods are slow and unsuitable for large-scale agriculture.
 - There's a need for automated, scalable solutions for disease detection.
 
+---
+
 ### METHODOLOGY
-##### Step 1: Dataset Preparation
+#### Step 1: Dataset Preparation
 - We have used publicly available ‘PlantVillage’ dataset.
 - It includes 1000 images each of ‘Early Blight’ and ‘Late Blight’, along with 152 ‘Healthy’ leaf images, totalling 2152 potato leaf images.
 
 ![image](https://github.com/KD-Blitz/PotatoLife/assets/118080140/2414525f-a9c3-41ce-a4dd-168be5820b1c)
 
-##### Step 2: Data Preprocessing
+#### Step 2: Data Preprocessing
 - Data Batch Loading: Into 68 batches of 32 images each
 - Data Partitioning: Into train, test and validation sub-datasets
 - Data Resizing: To a constant size of 256 X 256
 - Data Rescaling: Divided pixel intensities of each image by 255.
 - Data Augmentation: As random flipping and random rotation
 
-##### Step 3: Model Building
+#### Step 3: Model Building
 - CNN Model Architecture: Consisted of-
   1) 6 convolutional layers with 3X3 kernel size and ReLU activation function
   2) 6 max-pooling layers 
@@ -51,7 +78,7 @@
 - Compiled the model using Adam optimizer, Sparse categorical cross-entropy loss and Accuracy metric.
 - The training process involved 50 epochs, with each epoch comprising 54 steps.
 
-##### Step 4: FastAPI Integration
+#### Step 4: FastAPI Integration
 - Implementation details:
   1) Endpoint Creation: We developed a FastAPI server on localhost, listening on port 8000.
   2) Endpoint Routes: We implemented the Post / Predict API route to facilitate interaction with the model. This route accepts an uploaded potato leaf image, processes it, feeds it into our trained model, and returns the predicted class (early blight, late blight, or healthy) along with a confidence score.
@@ -65,17 +92,30 @@ Upon receiving an image upload through the /predict endpoint, FastAPI performs t
 
 ![image](https://github.com/KD-Blitz/PotatoLife/assets/118080140/f0d62ccf-869c-4c59-a73b-b9d561cb1255)
 
+##### Step 5: Web App Development and Deployment
+
+- Developed an interactive web app using **Streamlit**.
+- Key Features:
+  - Image upload functionality with format validation.
+  - Model prediction and visualization of class and confidence.
+  - User-friendly layout with sidebar instructions.
+  - Deployed on **Streamlit Community Cloud** for global access.
+- Enables seamless interaction for farmers and researchers for real-time disease detection.
+
+<!--
 ### PROPOSED FRAMEWORK
 ![image](https://github.com/KD-Blitz/PotatoLife/assets/118080140/c0f5cebc-a9d3-4870-81b5-8abd416b20c0)
+-->
+---
 
 ### RESULTS
 - Upon completion of training, our model achieved a remarkable test accuracy of 98.83%, demonstrating the model's efficacy in classifying potato leaves into three categories: early blight, late blight, and healthy conditions.
 ![image](https://github.com/KD-Blitz/PotatoLife/assets/118080140/d4a77d8c-e31f-41f6-b59f-0fce38e70c95)
 
 - Alongside, we have the model’s predictions on a sample of test images, where:
-   “Actual" represents the true class.
-   “Predicted represents the predicted class.
-   “Confidence" is the confidence score associated with the prediction, which reflects upon the reliability of the model's decision.
+  - “Actual" represents the true class.
+  - “Predicted represents the predicted class.
+  - “Confidence" is the confidence score associated with the prediction, which reflects upon the reliability of the model's decision.
 ![image](https://github.com/KD-Blitz/PotatoLife/assets/118080140/199ceb75-6bd8-4ab3-9f99-a75f5dcf4ddb)
 
 - FastAPI Working
@@ -86,17 +126,63 @@ Upon receiving an image upload through the /predict endpoint, FastAPI performs t
 - Postman software interacting with the model via API request and giving prediction result as a json response for a sample leaf image.
 ![image](https://github.com/KD-Blitz/PotatoLife/assets/118080140/349da7dc-f94e-420e-a528-1d6fbfc74606)
 
+- Web App Interface
+![wai_1](https://github.com/user-attachments/assets/d27e7d67-fa97-4801-89b9-d625612d9930)
+![wai_2](https://github.com/user-attachments/assets/ff2c23a3-9178-455f-8b6e-cb314c5a3cf2)
+
+---
+
+### INSTALLATION
+
+To set up the project on your local machine, follow these steps:
+
+1. **Clone the repository**:
+```sh
+    git clone https://github.com/krishnaura45/PotatoLife.git
+    cd PotatoLife
+```
+2. **Install dependencies**:
+```sh
+    pip install -r requirements.txt
+```
+3. **Run the Streamlit app**:
+```sh
+    streamlit run app.py
+```
+
+---
+
+### CONTRIBUTING
+- Fork the repository.
+- Create a new branch.
+- Commit changes with clear messages.
+- Submit a pull request.
+- Ensure new features are tested and documented.
+
+---
+
+### TECH STACK
+- **Python**: Backend logic and data handling.
+- **TensorFlow**: Deep learning model.
+- **Streamlit**: Web app development.
+- **FastAPI**: API interaction and server handling.
+- **Postman**: API testing and interaction.
+- **Pillow**, **NumPy**, **Matplotlib**: Image processing and visualization.
+
+<!--
 ### CONCLUSIONS/OUTCOMES
 - Robust Data Preparation: Data preprocessing, involving batch loading, resizing, rescaling, and data augmentation, enhanced dataset quality and diversity.
 - Model achieved an impressive 98.83% test accuracy, showcasing deep learning's effectiveness in disease classification.
 - User-Friendly Implementation: FastAPI and Postman software facilitated user-friendly disease classification, empowering farmers and experts for on-the-spot diagnosis.
 - Effectively address timely and accurate detection of potato leaf diseases.
+-->
+---
 
-### FUTURE SCOPE/PLANS
+### FUTURE PLANS
 - Create a mobile app
-- Emphasize on the need for FastAPI server security, including measures like authentication and authorization to safeguard model and user data.
-- Implement monitoring and logging tools to track server performance, usage, and errors. 
-- Implement a feedback mechanism to collect user input for ongoing model enhancements.
+- Emphasize on the need for FastAPI server security, including integration with Docker and measures like authentication and authorization to safeguard model and user data.
+
+---
 
 ### REFERENCES
 1) S. Biswas, B. Jagyasi, B. P. Singh and M. Lal, "Severity identification of Potato Late Blight disease from crop images captured under uncontrolled environment," 2014 IEEE Canada International Humanitarian Technology Conference - (IHTC), Montreal, QC, Canada, 2014, pp. 1-5, doi: 10.1109/IHTC.2014.7147519.
@@ -104,5 +190,8 @@ Upon receiving an image upload through the /predict endpoint, FastAPI performs t
 3) Rabbia Mahum, Haris Munir, Zaib-Un-Nisa Mughal, Muhammad Awais, Falak Sher Khan, Muhammad Saqlain, Saipunidzam Mahamad & Iskander Tlili. A novel framework for potato leaf disease detection using an efficient deep learning model, Human and Ecological Risk Assessment: An International Journal; 2022.
 4) Chakraborty KK, Mukherjee R, Chakroborty C, Bora K. Automated recognition of optical image based potato leaf blight diseases using deep learning. Physiological and Molecular Plant Pathology. 2022;117:101781
 
-### Group/Team
-Krishna Dubey (DL and Backend), Pankaj Kumar Giri (Backend)
+---
+
+### Contributors 
+- Krishna Dubey (Data Collection / Machine Learning / API Development / Web App Development)
+- Pankaj Kumar Giri (API Code Help)
